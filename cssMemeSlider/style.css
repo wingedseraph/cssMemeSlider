@@ -165,3 +165,19 @@ input[type="radio"]#control4:checked ~ .image-controls #text4 {
     width: 100%;
   }
 }
+
+#control1:checked ~ .slides + .image-controls .another label[for="control1"] {
+  background-color: transparent;
+}
+
+#control2:checked ~ .slides + .image-controls .another label[for="control2"] {
+  background-color: transparent;
+}
+
+#control3:checked ~ .slides + .image-controls .another label[for="control3"] {
+  background-color: transparent;
+}
+
+#control4:checked ~ .slides + .image-controls .another label[for="control4"] {
+  background-color: transparent;
+}
