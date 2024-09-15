@@ -135,7 +135,7 @@ input[type="radio"]:checked {
   border: 2px solid #7aa2c7;
 }
 
-input[type="radio"]#contro4:checked ~ .slides {
+input[type="radio"]#control4:checked ~ .slides {
   transform: translateX(0%);
 }
 
