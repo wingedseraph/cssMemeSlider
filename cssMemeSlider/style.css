@@ -135,19 +135,19 @@ input[type="radio"]:checked {
   border: 2px solid #7aa2c7;
 }
 
-input[type="radio"]#control4:checked ~ .slides {
+input[type="radio"]#control1:checked ~ .slides {
   transform: translateX(0%);
 }
 
-input[type="radio"]#control3:checked ~ .slides {
+input[type="radio"]#control2:checked ~ .slides {
   transform: translateX(-100%);
 }
 
-input[type="radio"]#control2:checked ~ .slides {
+input[type="radio"]#control3:checked ~ .slides {
   transform: translateX(-200%);
 }
 
-input[type="radio"]#control1:checked ~ .slides {
+input[type="radio"]#control4:checked ~ .slides {
   transform: translateX(-300%);
 }
 
