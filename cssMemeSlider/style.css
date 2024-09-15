@@ -1,0 +1,160 @@
+body {
+  background-color: #26282a;
+  margin: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  max-width: 50vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+}
+
+.control-wrapper {
+  display: inline-block;
+  padding: 2px;
+}
+
+.control {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #7aa2c7;
+  background-color: #7aa2c7;
+}
+
+input[type="radio"]:checked ~ .slides {
+  transform: translateX(calc(var(--slide-index) * -100%));
+}
+
+input[type="radio"]#slide1:checked ~ .slides {
+  --slide-index: 0;
+}
+
+input[type="radio"]#slide2:checked ~ .slides {
+  --slide-index: 1;
+}
+
+input[type="radio"]#slide3:checked ~ .slides {
+  --slide-index: 2;
+}
+
+input[type="radio"]#slide4:checked ~ .slides {
+  --slide-index: 3;
+}
+
+input[type="radio"]:checked + .controls .control-wrapper .control {
+  background-color: transparent;
+  border: 2px solid #7aa2c7;
+}
+.image-text {
+  color: white;
+  font-size: 2rem;
+}
+.image-meme {
+  max-width: 50vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 15%;
+}
+.image-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 50vw;
+  width: 100%;
+  padding-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+.element {
+  background-color: orange;
+  width: 25px;
+  height: 25px;
+  border-radius: 55%;
+}
+.element:hover {
+  background-color: black;
+  transition: all 0.5s linear;
+}
+.another {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.image-text {
+  font-size: 2rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.control:hover {
+  background-color: white;
+}
+
+input[type="radio"]:checked {
+  background-color: transparent;
+  border: 2px solid #7aa2c7;
+}
+
+input[type="radio"]#contro4:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+input[type="radio"]#control3:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+input[type="radio"]#control2:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+input[type="radio"]#control1:checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+@media screen and (max-width: 768px) {
+  .image-controls {
+    flex-direction: column;
+    max-width: 50vw;
+    flex-wrap: nowrap;
+  }
+}

@@ -1,11 +1,51 @@
-<!-- prettier-ignore -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>css meme</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <link href="style.css" rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="slider">
+        <input type="radio" id="control1" name="slides" checked="" />
+        <input type="radio" id="control2" name="slides" />
+        <input type="radio" id="control3" name="slides" />
+        <input type="radio" id="control4" name="slides" />
+        <div class="slides">
+          <div class="slide">
+            <img src="./img/1_meme.webp" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="./img/1_meme.webp" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="./img/1_meme.webp" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="./img/1_meme.webp" alt="Slide 4" />
+          </div>
+        </div>
+
+        <div class="image-controls">
+          <div class="another">
+            <!-- <input type="radio" id="control1" name="slides" checked /> -->
+            <label for="control1" class="control"></label>
+
+            <!-- <input type="radio" id="control2" name="slides" /> -->
+            <label for="control2" class="control"></label>
+
+            <!-- <input type="radio" id="control3" name="slides" /> -->
+            <label for="control3" class="control"></label>
+
+            <!-- <input type="radio" id="control4" name="slides" /> -->
+            <label for="control4" class="control"></label>
+          </div>
+          <p class="image-text">study please</p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
