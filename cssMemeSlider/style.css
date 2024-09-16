@@ -1,0 +1,199 @@
+body {
+  background-color: #26282a;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.slider {
+  position: relative;
+  max-width: 50vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: 50vh;
+  width: 100%;
+  height: auto;
+  border-radius: 2%;
+}
+
+.control {
+  display: flex;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: 2px solid #7aa2c7;
+  background-color: #7aa2c7;
+}
+
+input[type="radio"]:checked ~ .slides {
+  transform: translateX(calc(var(--slide-index) * -100%));
+}
+
+input[type="radio"]#slide1:checked ~ .slides {
+  --slide-index: 0;
+}
+
+input[type="radio"]#slide2:checked ~ .slides {
+  --slide-index: 1;
+}
+
+input[type="radio"]#slide3:checked ~ .slides {
+  --slide-index: 2;
+}
+
+input[type="radio"]#slide4:checked ~ .slides {
+  --slide-index: 3;
+}
+
+input[type="radio"]:checked + label {
+  background-color: transparent;
+}
+.image-text {
+  color: white;
+  font-size: 1rem;
+}
+.image-meme {
+  max-width: 50vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  border-radius: 15%;
+}
+.image-controls {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 50vw;
+  width: 100%;
+  padding-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.another {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.control:hover {
+  background-color: white;
+}
+
+input[type="radio"]:checked {
+  background-color: transparent;
+  border: 2px solid #7aa2c7;
+}
+
+input[type="radio"]#control1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+input[type="radio"]#control2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+input[type="radio"]#control3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+input[type="radio"]#control4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+.hide {
+  display: none;
+}
+
+
+@keyframes slide-text {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+input[type="radio"]#control1:checked ~ .image-controls #text1 {
+  display: block;
+  animation: slide-text 0.5s;
+}
+
+input[type="radio"]#control2:checked ~ .image-controls #text2 {
+  display: block;
+  animation: slide-text 0.5s;
+}
+
+input[type="radio"]#control3:checked ~ .image-controls #text3 {
+  display: block;
+  animation: slide-text 0.5s;
+}
+
+input[type="radio"]#control4:checked ~ .image-controls #text4 {
+  display: block;
+  animation: slide-text 0.5s;
+}
+@media screen and (max-width: 500px) {
+  .image-controls {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .image-text {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+#control1:checked ~ .slides + .image-controls .another label[for="control1"] {
+  background-color: transparent;
+}
+
+#control2:checked ~ .slides + .image-controls .another label[for="control2"] {
+  background-color: transparent;
+}
+
+#control3:checked ~ .slides + .image-controls .another label[for="control3"] {
+  background-color: transparent;
+}
+
+#control4:checked ~ .slides + .image-controls .another label[for="control4"] {
+  background-color: transparent;
+}
